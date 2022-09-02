@@ -1,0 +1,123 @@
+@media (max-width: 1280px){
+    .container {
+        max-width: 1140px;
+    }
+    .hero-title {
+        font-size: 130px;
+    }
+    .hero-img img {
+        width: 202px;
+    }
+    .hero-img-3 img {
+        width: 300px;
+    }
+    .hero-subtitle {
+        gap: 70px;
+    }
+    .exceptional-title {
+        font-size: 34px;
+    }
+    .exceptional-text .text {
+        font-size: 80px;
+    }
+    .requirements-title .title-1 {
+        font-size: 72px;
+    }
+    .requirements-title .title-2 > div {
+        font-size: 96px;
+    }
+    .requirements-title .title-3 > div {
+        font-size: 80px;
+    }
+    .requirements-image img {
+        border-radius: 20px;
+    }
+    .requirements-image {
+        width: 150px;
+    }
+    .requirements-image.image-3 {
+        width: 230px;
+        right: 10em;
+    }
+    .requirements-arrow, .accomplish-arrow {
+        width: 100px;
+    }
+    .solutions-title {
+        font-size: 48px;
+    }
+    #workflow {
+        padding-top: 40px;
+    }
+    .workflow-content-train {
+        padding-bottom: 110px;
+    }
+    .workflow-content {
+        flex-basis: 330px;
+        padding: 40px 24px;
+        border-radius: 24px;
+        min-height: 400px;
+    }
+    .workflow-title-outer {
+        margin-bottom: 40px;
+        margin-top: 24px;
+    }
+    .workflow-title {
+        font-size: 48px;
+    }
+    .workflow-content-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    .workflow-content-body {
+        font-size: 24px;
+    }
+    .partners-logo .partners-logo-img {
+        padding: 24px;
+    }
+    .partners-logo div > img {
+        height: 32px;
+    }
+    .cta-title {
+        font-size: 80px;
+    }
+    .cta-title .title-1 > span {
+        width: 64px;
+    }
+    .cta-button {
+        font-size: 20px;
+        padding: 24px;
+        min-height: 72px;
+    }
+    .footer-title {
+        font-size: 80px;
+    }
+    .footer-contact-body {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1199.98px){
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 767.98px) {
+    body {
+        font-size: 14px;
+        line-height: 21px;
+    }
+	.container {
+        max-width: 100%;
+        padding: 0 24px;
+    }
+}
+@media (max-width: 575.98px) {
+    
+}
+@media (max-width: 360px) {
+	
+}
