@@ -30,6 +30,7 @@ ScrollTrigger.defaults({
     scroller: ".smooth-scroll"
 });
 
+
 // Hero Animation
 var hero = gsap.timeline();
 var title = document.querySelectorAll('.hero-title');
@@ -50,12 +51,12 @@ hero.fromTo(title[0],
         .fromTo(".hero-img-1", { x: -50, opacity: 0 }, { duration: 2, x: 0, opacity: 1 }, "-=.5")
         .fromTo(".hero-img-2", { scale: 0, opacity: 0 }, { duration: 2, scale: 1, opacity: 1 }, "-=1.8")
         .fromTo(".hero-img-3", { y: 100, opacity: 0 }, { duration: 2, y: 0, opacity: 1 }, "-=1.9")
-        .fromTo(".hero-subtitle-cta-mobile", { y: 100, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=2")
         .fromTo(".hero-star", { y: 100, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=2");
 
         
         
 // Requirement Animation
+
 const requirementText = gsap.timeline({
     scrollTrigger: {
         trigger: ".exceptional-pattern",
@@ -63,13 +64,45 @@ const requirementText = gsap.timeline({
         end: "bottom bottom",
     }
 });
-requirementText.fromTo(".requirements-image.image-1", { x: -500, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=5")
+requirementText.fromTo(".requirements-image.image-1", { x: -200, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=5")
                 .fromTo(".requirements-arrow-horizontal", { x: 200, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=.8")
-                .fromTo(".gap-top", { height: 500, width: 2}, { duration: 1, height: 0, width: 0 }, "-=.8")
-                .fromTo(".requirements-image.image-2", { y: 500, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
-                .fromTo(".requirements-star", { y: 500, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
+                .fromTo(".gap-top", { height: 200, width: 2}, { duration: 1, height: 0, width: 0 }, "-=.8")
+                .fromTo(".requirements-image.image-2", { y: 200, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
+                .fromTo(".requirements-star", { y: 200, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
                 .fromTo(".requirements-arrow", { scale: 0, opacity: 0 }, { duration: 1, scale: 1, opacity: 1 }, "-=1")
-                .fromTo(".requirements-image.image-3", { y: 500, opacity: 0 }, { duration: 1, y: -100, opacity: 1 }, "-=.5")
+                .fromTo(".requirements-image.image-3", { y: 200, opacity: 0 }, { duration: 1, y: -100, opacity: 1 }, "-=.5")
+
+const transitionFade = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".requirements-wrap",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+    }
+});
+transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
+    .to(".gap-title-1", { width: 72, duration: 1 }, "-=1")
+    .to(".gap-title-2", { width: 30, duration: 1 }, "-=1")
+    .to(".gap-title-3", { width: 60, duration: 1 }, "-=1")
+    // .to(".requirements-image.image-1", { x: 80, duration: 1 }, "-=1")
+    // .to(".requirements-image.image-2", { y: -40, duration: 1 }, "-=1")
+    // .to(".requirements-star", { y: -40, duration: 1 }, "-=1")
+    // .to(".requirements-image.image-3", { y: -40, duration: 1 }, "-=1")
+    // .to(".requirements-arrow", { y: 100, duration: 1 }, "-=1")
+    // .to(".requirements-arrow-horizontal", { x: -50, duration: 1 }, "-=1")
+    .to(".requirements-box", {rotation: -90, duration: .5})
+    .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
+    .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
+    .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
+    .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+    .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+    .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
+    .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5")
+    .to(".accomplish-title > .title-1", { x: 60, duration: 1 }, "-=.5")
+    .to(".accomplish-title > .title-2", { x: 30, duration: 1 }, "-=1")
+    .to(".accomplish-title > .title-3", { x: 40, duration: 1 }, "-=.5")
+    .to(".accomplish-arrow", { y: 5, duration: 1 }, "-=1.5")
+    .to(".accomplish-arrow-horizontal", { x: 100, duration: 1 }, "-=1.5");
 
 const solutions = gsap.timeline({
     scrollTrigger: {
@@ -117,54 +150,3 @@ const footer = gsap.timeline({
     });
 footer.to(".footer-image", {scale: 1.2, duration: 2, })
         .fromTo(".footer-arrow", {rotate: 90}, { duration: 2, rotate: 0, });
-
-
-let mm = gsap.matchMedia();
-const transitionFade = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".requirements-wrap",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-    }
-});
-mm.add("(min-width: 800px)", () => {
-    transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
-        .to(".gap-title-1", { width: 16, duration: 1 }, "-=1")
-        .to(".gap-title-2", { width: 16, duration: 1 }, "-=1")
-        .to(".gap-title-3", { width: 16, duration: 1 }, "-=1")
-        // .to(".requirements-image.image-1", { x: 80, duration: 1 }, "-=1")
-        // .to(".requirements-image.image-2", { y: -40, duration: 1 }, "-=1")
-        // .to(".requirements-star", { y: -40, duration: 1 }, "-=1")
-        // .to(".requirements-image.image-3", { y: -40, duration: 1 }, "-=1")
-        // .to(".requirements-arrow", { y: 100, duration: 1 }, "-=1")
-        // .to(".requirements-arrow-horizontal", { x: -50, duration: 1 }, "-=1")
-        .to(".requirements-box", {rotation: -90, duration: .5})
-        .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
-        .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
-        .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
-        .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5")
-        .to(".accomplish-title > .title-1", { x: 60, duration: 1 }, "-=.5")
-        .to(".accomplish-title > .title-2", { x: 30, duration: 1 }, "-=1")
-        .to(".accomplish-title > .title-3", { x: 40, duration: 1 }, "-=.5")
-        .to(".accomplish-arrow", { y: 50, duration: 1 }, "-=1.5")
-        .to(".accomplish-arrow-horizontal", { x: 100, duration: 1 }, "-=1.5");
-});
-    
-mm.add("(max-width: 799px", () => {
-    transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
-        .to(".gap-title-1", { width: 16, duration: 1 }, "-=1")
-        .to(".gap-title-2", { width: 16, duration: 1 }, "-=1")
-        .to(".gap-title-3", { width: 16, duration: 1 }, "-=1")
-        .to(".requirements-box", {rotation: -90, duration: .5})
-        .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
-        .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
-        .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
-        .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
-        .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5");
-});
