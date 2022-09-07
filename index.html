@@ -16,9 +16,27 @@
 <body>
     <div class="smooth-scroll"> 
         <div class="container" data-scroll-section>
+            <div class="row d-lg-none">
+                <div class="col-12">
+                    <div class="navigation-mobile">
+                        <div class="navigation-mobile-logo">
+                            <img src="assets/img/logo-black.png" alt="" class="w-100">
+                        </div>
+                        <div class="navigation-mobile-cta">
+                            <a href="" class="navigation-cta navigation-cta-mobile">
+                                <span>TALK TO US</span>
+                                <div>TALK TO US</div>
+                            </a>
+                            <div class="navigation-mobile-toggle">
+                                <img src="assets/img/icons/toggle.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 px-md-0">
-                    <ul class="navigation">
+                    <ul class="navigation d-none">
                         <li class="logo"><img src="assets/img/logo-black.png" alt="" class="w-100"></li>
                         <div class="d-flex align-items-center nav-menu">
                             <li><a href="">OUR SOLUTION</a></li>
@@ -42,20 +60,20 @@
                     <div class="col-12 px-md-0">
                         <div class="row">
                             <div class="col-12">
-                                <div class="hero">
+                                <div class="hero title-1">
                                     <div class="hero-img hero-img-1">
                                         <img src="assets/img/hero-1.png" data-scroll>
                                     </div>
                                     <div class="hero-title">
                                         WE HAVE <span>&reg;</span>
                                     </div>
-                                    <div class="hero-line"></div>
+                                    <div class="hero-line d-none d-lg-inline-block"></div>
                                 </div>
                                 <div class="hero title-2">
                                     <div class="hero-title hero-title-center">
                                         KNOW HOW<span>*</span>
                                     </div>
-                                    <div class="hero-img hero-img-2">
+                                    <div class="hero-img hero-img-2 d-none d-lg-inline-block">
                                         <img src="assets/img/hero-2.png">
                                     </div>
                                 </div>
@@ -67,11 +85,12 @@
                                         <div>
                                             TO MAKE <br/>THE <div>IMPACT</div>
                                         </div>
-                                        <a href="">START A PROJECT <span><img src="assets/img/icons/arrow-right.svg" alt=""></span></a>
+                                        <a href="" class="d-none d-lg-inline-block">START A PROJECT <span><img src="assets/img/icons/arrow-right.svg" alt=""></span></a>
                                     </div>
                                 </div>
+                                <a href="" class="d-lg-none hero-subtitle-cta-mobile">START A PROJECT <span><img src="assets/img/icons/arrow-right.svg" alt=""></span></a>
                             </div>
-                            <div class="col-1 offset-2">
+                            <div class="col-3 col-lg-1 offset-2">
                                 <img src="assets/img/icons/star.svg" alt="" class="w-100 hero-star">
                             </div>
                         </div>
@@ -79,7 +98,7 @@
                 </div>
             </div>
         </section>
-        <section data-scroll-section class="bg-template">
+        <section data-scroll-section class="bg-template mb-5 mb-lg-0">
             <section id="exceptional" class="exceptional-box">
                 <div class="container">
                     <div class="row">
@@ -92,10 +111,10 @@
                                     </div>
     
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-8 offset-2 col-lg-3 offset-lg-0 order-first order-lg-last">
                                     <img src="assets/img/stand-out.png" alt="" class="w-100 exceptional-img" data-scroll data-scroll-speed="4">
                                 </div>
-                                <div class="col-lg-1 text-end pe-0">
+                                <div class="col-2 col-lg-1 text-end pe-4 pe-lg-0 order-first order-lg-last">
                                     <img src="assets/img/icons/arrow-loop-top.svg" alt="" class="exceptional-pattern">
                                 </div>
                             </div>
@@ -117,20 +136,23 @@
                         <div data-scroll data-scroll-sticky data-scroll-target="#requirements">
                             <div class="row requirements-track">
                                 <div class="col-12 px-0 position-relative bg-template requirements-track" style="transform: translate3d(0,0,0);">
-                                    <div class="row">
-                                        <div class="col-lg-3">
+                                    <div class="row requirements-track-top">
+                                        <div class="col-6 col-lg-3">
                                             <div class="requirements-image image-1">
                                                 <img src="assets/img/requirements-1.png" alt="" class="w-100">
                                             </div>
                                         </div>
-                                        <div class="col-lg-9 text-end">
+                                        <div class="col-6 col-lg-9 text-end">
                                             <div class="requirements-arrow-horizontal">
                                                 <img src="assets/img/icons/arrow-loop-left-black.svg" alt="">
                                            </div>
+                                           <div class="requirements-arrow">
+                                                <img src="assets/img/icons/arrow-left-bottom-circle.svg" alt="">
+                                            </div>
                                         </div>
                                     </div>
                                    <div class="row requirements-track align-items-center">
-                                        <div class="col-lg-8 offset-lg-1">
+                                        <div class="col-10 col-lg-8 offset-lg-1">
                                             <div class="requirements-title">
                                                 <span class="gap-top d-inline-block"></span>
                                                 <div class="title-1">
@@ -148,14 +170,14 @@
                                                 </div>
                                              </div>
                                         </div>
-                                        <div class="col-lg-3 text-end">
+                                        <div class="col-lg-3 text-end d-none d-lg-flex">
                                             <div class="requirements-arrow">
                                                 <img src="assets/img/icons/arrow-left-bottom-circle.svg" alt="">
                                             </div>
                                         </div>
                                    </div>
-                                   <div class="row align-items-center mt-3">
-                                        <div class="col-lg-4 offset-lg-1 requirements-left-spacer">
+                                   <div class="row align-items-center mt-3 requirements-track-bottom">
+                                        <div class="col-4 offset-lg-1 requirements-left-spacer">
                                             <div class="requirements-image image-2">
                                                 <img src="assets/img/requirements-2.png" alt="" class="w-100">
                                             </div>
@@ -163,7 +185,7 @@
                                                 <img src="assets/img/icons/star-black.svg" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 text-end">
+                                        <div class="col-6 text-end">
                                             <div class="requirements-image image-3">
                                                  <img src="assets/img/requirements-3.png" alt="" class="w-100">
                                             </div>
@@ -175,14 +197,14 @@
                                         <div class="requirements-box-inner-dark-content">
                                             <div class="container">
                                                 <div class="row">
-                                                    <div class="col-lg-5 text-end">
+                                                    <div class="col-lg-5 text-center text-lg-end">
                                                         <div class="accomplish-arrow-horizontal">
                                                             <img src="assets/img/icons/arrow-left-right.svg" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row align-items-center accomplish-outline">
-                                                    <div class="col-xl-4 pe-lg-5">
+                                                    <div class="col-6 offset-3 col-xl-4 pe-lg-5 offset-xl-0 text-center text-lg-start mb-5 mb-lg-0">
                                                         <div class="accomplish-title">
                                                             <div class="title-1">
                                                                 <div>WE</div>
@@ -200,7 +222,7 @@
                                                             <img src="assets/img/icons/arrow-bottom-circle.svg" alt="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-8 ps-3 text-end">
+                                                    <div class="col-lg-8 ps-lg-3 text-center text-lg-end mt-5 mt-lg-0">
                                                         <div class="circular">
                                                             <div class="circular-text">
                                                                 <img src="assets/img/circle-text.svg" alt="" class="w-100">
@@ -659,6 +681,7 @@
             </div>
         </section>
     </div>
+    <div class="overlay"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>

@@ -1,3 +1,11 @@
+html.has-scroll-smooth {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
 body {
     font-family: 'Inter', sans-serif;
     background: #DADCDF;
@@ -50,7 +58,7 @@ button, input {
 .navigation li.logo {
     width: 168px;
 }
-.navigation-cta {
+.navigation-cta, .navigation-cta-mobile {
     background: #070713;
     color: #FFFFFF !important;
     border-radius: 24px;
@@ -61,22 +69,22 @@ button, input {
     display: inline-block;
     min-height: 44px;
 }
-.navigation-cta span {
+.navigation-cta span, .navigation-cta-mobile span {
     transition: all .5s;
     display: block;
 } 
-.navigation-cta div {
+.navigation-cta div, .navigation-cta-mobile div {
     display: block;
     position: absolute;
     top: 60px;
     transition: all .5s;
     text-align: center;
 }
-.navigation-cta:hover div {
+.navigation-cta:hover div, .navigation-cta-mobile:hover div {
     top: 50%;
     transform: translateY(-50%);
 }
-.navigation-cta:hover span {
+.navigation-cta:hover span, .navigation-cta-mobile:hover span {
     margin-top: -60px;
 }
 .navigation-cta:hover {
@@ -147,7 +155,7 @@ button, input {
     color: #2B2C2F;
     display: inline-block;
 }
-.hero-subtitle a {
+.hero-subtitle a, .hero-subtitle-cta-mobile {
     padding: 24px 32px;
     border: 2px solid #070713;
     border-radius: 40px;

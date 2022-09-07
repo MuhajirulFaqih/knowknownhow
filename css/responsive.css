@@ -116,7 +116,181 @@
     }
 }
 @media (max-width: 575.98px) {
-    
+    .navigation {
+        display: block;
+        margin-top: 21px;
+        margin-bottom: 66px;
+        background: #DADCDF;
+        text-align: center;
+        position: fixed;
+        padding: 96px 0;
+    }
+    .navigation-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 21px;
+        margin-bottom: 66px;
+    }
+    .navigation-mobile-logo {
+        flex: 0 0 83px;
+    }
+    .navigation-mobile-cta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    } 
+    .navigation-mobile-cta a, .navigation-mobile-cta .navigation-mobile-toggle {
+        display: inline-block;
+    }
+    .navigation-mobile-cta a {
+        padding: 8px 20px;
+        min-height: 34px;
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .navigation-mobile-toggle {
+        width: 22px;
+    }
+    .hero {
+        margin-bottom: 20px;
+    }
+    .hero.title-1 {
+        gap: 5px;
+        flex-direction: row-reverse;
+    }
+    .hero-title {
+        font-size: 56px;
+        letter-spacing: -0.1em;
+    }
+    .hero.title-2 .hero-title span {
+        font-size: 56px;
+    }
+    .hero-img img {
+        width: 65px;
+        border-radius: 8px;
+    }
+    .hero-title span {
+        font-size: 32px;
+        margin-left: 4px;
+    }
+    .hero-img-3 img {
+        width: 141px;
+        border-radius: 20px;
+    }
+    .hero.title-3 {
+        gap: 6px;
+    }
+    .hero-subtitle div {
+        font-size: 26px;
+    }
+    .hero-subtitle-cta-mobile {
+        padding: 20px 32px;
+        gap: 14px;
+        display: inline-flex;
+        margin-top: 60px;
+        margin-bottom: 95px;
+    }
+    .hero-subtitle-cta-mobile span {
+        width: 44px;
+        display: inline-block;
+    }
+    .exceptional-box {
+        margin-bottom: 0;
+    }
+    .exceptional-title {
+        font-size: 24px;
+        margin: 0;
+        gap: 24px;
+    }
+    .exceptional-img {
+        border-radius: 28px;
+        margin-top: 40px;
+    }
+    .exceptional-title img {
+        width: 50px;
+    }
+    .exceptional-text {
+        padding-top: 24px;
+        margin-top: 80px;
+    }
+    .exceptional-text .text {
+        font-size: 42px;
+    }
+    #requirements {
+        margin-top: 140px;
+    }
+    .requirements-wrap {
+        height: 2700px;
+    }
+    .requirements-track-top {
+        position: absolute;
+        top: 50px;
+    }
+    .requirements-track-bottom {
+        margin-top: -270px !important;
+    }
+    .requirements-title {
+        margin-top: -60px;
+    }
+    .requirements-title .title-1 {
+        font-size: 32px;
+    }
+    .requirements-title .title-2 > div {
+        font-size: 56px;
+    }
+    .requirements-title .title-3 > div {
+        font-size: 34px;
+    }
+    .requirements-image, .requirements-arrow-horizontal, .requirements-arrow {
+        position: relative;
+    }
+    .requirements-arrow-horizontal {
+        margin-bottom: 43px;
+    }
+    .requirements-image {
+        width: 111px;
+    }
+    .requirements-arrow, .accomplish-arrow {
+        width: 72px;
+    }
+    .gap-title-1, .gap-title-2, .gap-title-3 {
+        width: 16px;
+    }
+    .requirements-box {
+        width: 216px;
+        height: 358px;
+    }
+    .requirements-left-spacer {
+        padding-left: 24px;
+    }
+    .requirements-image.image-2 {
+        width: 83px;
+        bottom: 0;
+    }
+    .requirements-image.image-3 {
+        width: 116px;
+        right: 0;
+    }
+    .requirements-star {
+        width: 40px;
+        margin-left: 0;
+        margin-top: 20px;
+        position: relative;
+    }
+    .requirements-box-inner-dark {
+        height: 95vh;
+    }
+    .accomplish-title {
+        font-size: 32px;
+    }
+    .accomplish-title .title-1, .accomplish-title .title-3  {
+        gap: 16px;
+    }
+    .accomplish-arrow {
+        margin-top: 24px;
+        display: inline-block;
+    }
 }
 @media (max-width: 360px) {
 	
