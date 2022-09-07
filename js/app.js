@@ -5,9 +5,7 @@ const locoScroll = new LocomotiveScroll({
     smooth: true,
     smartphone: {
         smooth: true,
-        inertia: 0.8,
-        getDirection: true,
-        breakpoint: 0,
+        multiplier: 0.8,
     },
     tablet: {
         smooth: true
@@ -63,13 +61,13 @@ const requirementText = gsap.timeline({
         end: "bottom bottom",
     }
 });
-requirementText.fromTo(".requirements-image.image-1", { x: -200, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=5")
+requirementText.fromTo(".requirements-image.image-1", { x: -500, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=5")
                 .fromTo(".requirements-arrow-horizontal", { x: 200, opacity: 0 }, { duration: 1, x: 0, opacity: 1 }, "-=.8")
-                .fromTo(".gap-top", { height: 200, width: 2}, { duration: 1, height: 0, width: 0 }, "-=.8")
-                .fromTo(".requirements-image.image-2", { y: 200, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
-                .fromTo(".requirements-star", { y: 200, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
+                .fromTo(".gap-top", { height: 500, width: 2}, { duration: 1, height: 0, width: 0 }, "-=.8")
+                .fromTo(".requirements-image.image-2", { y: 500, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
+                .fromTo(".requirements-star", { y: 500, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=.5")
                 .fromTo(".requirements-arrow", { scale: 0, opacity: 0 }, { duration: 1, scale: 1, opacity: 1 }, "-=1")
-                .fromTo(".requirements-image.image-3", { y: 200, opacity: 0 }, { duration: 1, y: -100, opacity: 1 }, "-=.5")
+                .fromTo(".requirements-image.image-3", { y: 500, opacity: 0 }, { duration: 1, y: -100, opacity: 1 }, "-=.5")
 
 const solutions = gsap.timeline({
     scrollTrigger: {
