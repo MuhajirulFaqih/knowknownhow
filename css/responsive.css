@@ -217,21 +217,8 @@
     .exceptional-text .text {
         font-size: 42px;
     }
-    #requirements {
-        margin-top: 140px;
-    }
     .requirements-wrap {
         height: 2700px;
-    }
-    .requirements-track-top {
-        position: absolute;
-        top: 50px;
-    }
-    .requirements-track-bottom {
-        margin-top: -270px !important;
-    }
-    .requirements-title {
-        margin-top: -60px;
     }
     .requirements-title .title-1 {
         font-size: 32px;

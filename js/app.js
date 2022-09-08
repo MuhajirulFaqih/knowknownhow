@@ -1,33 +1,75 @@
 // Scroll
 gsap.registerPlugin(ScrollTrigger);
-const locoScroll = new LocomotiveScroll({
-    el: document.querySelector('.smooth-scroll'),
-    smooth: true,
-    smartphone: {
-        smooth: true,
-        multiplier: 1,
-        getDirection: true,
-        lerp: 1,
+
+// Parallax
+gsap.to(".exceptional-img", {
+    scrollTrigger: {
+      trigger: ".exceptional-img",
+      scrub: true,
+      start: "top bottom",
+      end: "top top"
     },
-    tablet: {
-        smooth: true
-    },
-    multiplier: 0.2,
-});  
-locoScroll.on("scroll", ScrollTrigger.update);
-ScrollTrigger.scrollerProxy(".smooth-scroll", {
-    scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    }, 
-    getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-    },
-    pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+    y: -100,
 });
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-ScrollTrigger.refresh();
-ScrollTrigger.defaults({
-    scroller: ".smooth-scroll"
+
+gsap.to(".exceptional-title > div", {
+    scrollTrigger: {
+      trigger: ".exceptional-title > div",
+      scrub: true,
+      start: "top bottom",
+      end: "top top"
+    },
+    y: -20,
+});
+
+gsap.to(".exceptional-title > img", {
+    scrollTrigger: {
+      trigger: ".exceptional-title > img",
+      scrub: true,
+      start: "top bottom",
+      end: "top top"
+    },
+    y: -30,
+});
+
+gsap.to(".solution-arrow-horizontal", {
+    scrollTrigger: {
+      trigger: ".solution-arrow-horizontal",
+      scrub: true,
+      start: "top bottom",
+      end: "top top"
+    },
+    x: 100,
+});
+
+gsap.to(".star-phone", {
+    scrollTrigger: {
+      trigger: ".star-phone",
+      scrub: true,
+      start: "top bottom",
+      end: "top top"
+    },
+    rotate: 240,
+});
+
+gsap.from(".footer-image", {
+    scrollTrigger: {
+      trigger: "#footer",
+      scrub: true,
+      start: "top+50px bottom",
+      end: "top top+300px"
+    },
+    scale: .3,
+});
+
+gsap.from(".footer-arrow", {
+    scrollTrigger: {
+        trigger: "#footer",
+        scrub: true,
+        start: "top+50px bottom",
+        end: "top top+300px"
+    },
+    rotate: 90,
 });
 
 
@@ -52,11 +94,9 @@ hero.fromTo(title[0],
         .fromTo(".hero-img-2", { scale: 0, opacity: 0 }, { duration: 2, scale: 1, opacity: 1 }, "-=1.8")
         .fromTo(".hero-img-3", { y: 100, opacity: 0 }, { duration: 2, y: 0, opacity: 1 }, "-=1.9")
         .fromTo(".hero-star", { y: 100, opacity: 0 }, { duration: 1, y: 0, opacity: 1 }, "-=2");
+  
 
-        
-        
 // Requirement Animation
-
 const requirementText = gsap.timeline({
     scrollTrigger: {
         trigger: ".exceptional-pattern",
@@ -78,6 +118,7 @@ const transitionFade = gsap.timeline({
         start: "top top",
         end: "bottom bottom",
         scrub: true,
+        pin: ".requirements-sticky",
     }
 });
 transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
@@ -124,9 +165,10 @@ const workflow = gsap.timeline({
         trigger: ".workflow-container",
         start: "top top",
         end: "bottom bottom",
-        scrub: true
+        scrub: true,
+        pin: ".workflow-sticky"
     }
-    });
+});
 workflow.fromTo(".workflow-content-train", {x: "200vw"}, { duration: 1, x: 0, }, "-=.5")
 
 
@@ -138,15 +180,6 @@ const partners = gsap.timeline({
         scrub: true
     }
     });
-partners.to(".partners-phone", {y: -50, duration: .5, })
+partners.to(".partners-phone", {y: 80, duration: .5, })
         .fromTo(".partners-logo-1", {x: -100}, { duration: 1, x: 115, transformStyle: "preserve-3d"})
         .fromTo(".partners-logo-2", {x: 100}, { duration: 1, x: -115, transformStyle: "preserve-3d"}, "-=1")
-
-
-const footer = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#footer",
-    }
-    });
-footer.to(".footer-image", {scale: 1.2, duration: 2, })
-        .fromTo(".footer-arrow", {rotate: 90}, { duration: 2, rotate: 0, });
