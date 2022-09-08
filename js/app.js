@@ -169,7 +169,7 @@ const workflow = gsap.timeline({
         pin: ".workflow-sticky"
     }
 });
-workflow.fromTo(".workflow-content-train", {x: "200vw"}, { duration: 1, x: 0, }, "-=.5")
+workflow.fromTo(".workflow-content-train", {x: "2800px"}, { duration: 1, x: 0, }, "-=.5")
 
 
 const partners = gsap.timeline({

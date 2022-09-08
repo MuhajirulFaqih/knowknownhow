@@ -278,6 +278,103 @@
         margin-top: 24px;
         display: inline-block;
     }
+    .simple-title span {
+        font-size: 16px;
+    }
+    .solution-arrow-horizontal {
+        display: inline-block;
+    }
+    .solutions-spacer {
+        margin-top: 32px;
+    }
+    .solutions-title {
+        font-size: 32px;
+    }
+    .solutions-image {
+        margin-bottom: 24px;
+    }
+    .solutions-content-body {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+    .workflow-container {
+        padding-top: 40px;
+    }
+    .workflow-title {
+        font-size: 24px;
+    }
+    .workflow-nav {
+        width: 50px;
+    }
+    .workflow-circle div {
+        padding: 18px 26px;
+    }
+    .workflow-circle div > img {
+        width: 91px;
+    }
+    .workflow-circle span {
+        height: 82px;
+        flex-basis: 82px;
+    }
+    .workflow-content-train {
+        margin-right: 675px;
+    }
+    .workflow-container {
+        min-height: 265vh;
+    }
+    .cta-title {
+        font-size: 40px;
+    }
+    .cta-line {
+        width: 36px;
+        height: 2px;
+    }
+    .cta-title .title-1 > span {
+        width: 32px;
+        padding-top: 8px;
+    }
+    .cta-arrow {
+        width: 72px;
+        margin: 40px 0 32px; 
+    }
+    .cta-button {
+        padding: 24px 72px;
+        display: inline-block;
+    }
+    .partner-container {
+        height: 1000px;
+    }
+    #footer {
+        margin-top: 70px;
+    }
+    .footer-title {
+        font-size: 40px;
+    }
+    .footer-contact {
+        height: 152px;
+        padding: 0px 0px 0px 24px;
+        margin-bottom: 40px;
+    }
+    .simple-title span {
+        font-size: 14px;
+    }
+    .footer-contact-body {
+        font-size: 16px;
+        word-wrap: break-all;
+    }
+    .footer-contact-2 {
+        height: 224px;
+    }
+    .footer-image img {
+        width: 99px;
+    }
+    .footer-copy-outer {
+        margin-top: 36px;
+    }
+    .footer-copy {
+        font-size: 12px;
+        gap: 16px;
+    }
 }
 @media (max-width: 360px) {
 	

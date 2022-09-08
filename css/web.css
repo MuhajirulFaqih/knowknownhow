@@ -555,12 +555,12 @@ button, input {
     margin-bottom: 79px;
 }
 .workflow-title {
-    font-weight: 700;
     font-size: 56px;
     line-height: 120%;
     color: #FFFFFF;
 }
 .workflow-title span {
+    font-weight: 700;
     font-style: italic;
     color: #FB6B3E;
 }
