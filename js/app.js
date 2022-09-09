@@ -112,38 +112,66 @@ requirementText.fromTo(".requirements-image.image-1", { x: -200, opacity: 0 }, {
                 .fromTo(".requirements-arrow", { scale: 0, opacity: 0 }, { duration: 1, scale: 1, opacity: 1 }, "-=1")
                 .fromTo(".requirements-image.image-3", { y: 200, opacity: 0 }, { duration: 1, y: -100, opacity: 1 }, "-=.5")
 
-const transitionFade = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".requirements-wrap",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-        pin: ".requirements-sticky",
-    }
+
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 800px)", () => {
+    const transitionFade = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".requirements-wrap",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            pin: ".requirements-sticky",
+        }
+    });
+    transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
+        .to(".gap-title-1", { width: 72, duration: 1 }, "-=1")
+        .to(".gap-title-2", { width: 30, duration: 1 }, "-=1")
+        .to(".gap-title-3", { width: 60, duration: 1 }, "-=1")
+        .to(".requirements-box", {rotation: -90, duration: .5})
+        .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
+        .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
+        .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
+        .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5")
+        .to(".accomplish-title > .title-1", { x: 60, duration: 1 }, "-=.5")
+        .to(".accomplish-title > .title-2", { x: 30, duration: 1 }, "-=1")
+        .to(".accomplish-title > .title-3", { x: 40, duration: 1 }, "-=.5")
+        .to(".accomplish-arrow", { y: 5, duration: 1 }, "-=1.5")
+        .to(".accomplish-arrow-horizontal", { x: 100, duration: 1 }, "-=1.5");
 });
-transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
-    .to(".gap-title-1", { width: 72, duration: 1 }, "-=1")
-    .to(".gap-title-2", { width: 30, duration: 1 }, "-=1")
-    .to(".gap-title-3", { width: 60, duration: 1 }, "-=1")
-    // .to(".requirements-image.image-1", { x: 80, duration: 1 }, "-=1")
-    // .to(".requirements-image.image-2", { y: -40, duration: 1 }, "-=1")
-    // .to(".requirements-star", { y: -40, duration: 1 }, "-=1")
-    // .to(".requirements-image.image-3", { y: -40, duration: 1 }, "-=1")
-    // .to(".requirements-arrow", { y: 100, duration: 1 }, "-=1")
-    // .to(".requirements-arrow-horizontal", { x: -50, duration: 1 }, "-=1")
-    .to(".requirements-box", {rotation: -90, duration: .5})
-    .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
-    .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
-    .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
-    .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-    .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
-    .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
-    .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5")
-    .to(".accomplish-title > .title-1", { x: 60, duration: 1 }, "-=.5")
-    .to(".accomplish-title > .title-2", { x: 30, duration: 1 }, "-=1")
-    .to(".accomplish-title > .title-3", { x: 40, duration: 1 }, "-=.5")
-    .to(".accomplish-arrow", { y: 5, duration: 1 }, "-=1.5")
-    .to(".accomplish-arrow-horizontal", { x: 100, duration: 1 }, "-=1.5");
+
+mm.add("(max-width: 799px", () => {
+    const transitionFade = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".requirements-wrap",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            pin: ".requirements-sticky",
+        }
+    });
+    transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
+        .to(".gap-title-1", { width: 16, duration: 1 }, "-=1")
+        .to(".gap-title-2", { width: 16, duration: 1 }, "-=1")
+        .to(".gap-title-3", { width: 24, duration: 1 }, "-=1")
+        .to(".requirements-box", {rotation: -90, duration: .5})
+        .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
+        .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
+        .fromTo(".requirements-box-inner-dark", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=.8")
+        .fromTo(".accomplish-title", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".accomplish-arrow", {x: -500, opacity: 0}, { x: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".accomplish-arrow-horizontal", {y: -200, opacity: 0}, { y: 0, opacity: 1, duration: .5 }, "-=.5")
+        .fromTo(".circular", {scale: 0, opacity: 0}, { scale: 1, opacity: 1, duration: 1 }, "-=.5")
+        .to(".accomplish-title > .title-1", { x: 5, duration: 1 }, "-=.5")
+        .to(".accomplish-title > .title-2", { x: 6, duration: 1 }, "-=1")
+        .to(".accomplish-title > .title-3", { x: 5, duration: 1 }, "-=.5")
+        .to(".accomplish-arrow", { y: 5, duration: 1 }, "-=1.5")
+        .to(".accomplish-arrow-horizontal", { x: 5, duration: 1 }, "-=1.5");
+});
 
 const solutions = gsap.timeline({
     scrollTrigger: {
@@ -168,9 +196,16 @@ const workflow = gsap.timeline({
         scrub: true,
         pin: ".workflow-sticky"
     }
-});
-workflow.fromTo(".workflow-content-train", {x: "2800px"}, { duration: 1, x: 0, }, "-=.5")
+}).fromTo(".workflow-content-train", {x: "2800px"}, { duration: 1, x: 0, }, "-=.5");
 
+$(".workflow-nav.right").click(function() {
+    var valueScroll = $("html, body").scrollTop()
+    $("html, body").animate({scrollTop: valueScroll + 150}, 500, "easeInCubic");
+})
+$(".workflow-nav.left").click(function() {
+    var valueScroll = $("html, body").scrollTop()
+    $("html, body").animate({scrollTop: valueScroll - 150}, 500, "easeInCubic");
+})
 
 const partners = gsap.timeline({
     scrollTrigger: {

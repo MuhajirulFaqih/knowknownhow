@@ -220,6 +220,26 @@
     .requirements-wrap {
         height: 2700px;
     }
+    .requirements-track {
+        height: auto;
+    }
+    .requirements-track-mobile {
+        height: 100vh;
+    }
+    .requirements-middle-mobile {
+        display: flex;
+        flex-direction: column;
+        padding: 0 24px;
+    }
+    .requirements-middle-mobile > div.row-1 {
+        height: 30vh;
+    }
+    .requirements-middle-mobile > div.row-2 {
+        height: 48vh;
+    }
+    .requirements-middle-mobile > div.row-3 {
+        margin-top: -12vh !important;
+    }
     .requirements-title .title-1 {
         font-size: 32px;
     }
@@ -234,6 +254,7 @@
     }
     .requirements-arrow-horizontal {
         margin-bottom: 43px;
+        margin-top: 24px;
     }
     .requirements-image {
         width: 111px;
@@ -322,6 +343,9 @@
     .workflow-container {
         min-height: 265vh;
     }
+    #cta {
+        margin-top: 100px;
+    }
     .cta-title {
         font-size: 40px;
     }
@@ -342,7 +366,7 @@
         display: inline-block;
     }
     .partner-container {
-        height: 1000px;
+        height: 1200px;
     }
     #footer {
         margin-top: 70px;
