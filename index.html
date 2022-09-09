@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Know Known How</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +37,12 @@
         </div>
         <div class="row">
             <div class="col-12 px-md-0">
-                <ul class="navigation d-none d-lg-flex">
+                <ul class="navigation d-block d-lg-flex">
+                    <li class="d-block d-lg-none text-end">
+                        <div class="navigation-mobile-close d-inline-block py-4">
+                            <img src="assets/img/icons/close.svg" alt="">
+                        </div>
+                    </li>
                     <li class="logo"><img src="assets/img/logo-black.png" alt="" class="w-100"></li>
                     <div class="d-flex align-items-center nav-menu">
                         <li><a href="">OUR SOLUTION</a></li>
@@ -684,6 +692,7 @@
             </div>
         </div>
     </section>
+    <div class="overlay"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>

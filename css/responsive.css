@@ -118,12 +118,38 @@
 @media (max-width: 575.98px) {
     .navigation {
         display: block;
-        margin-top: 21px;
+        margin-top: -900px;
         margin-bottom: 66px;
         background: #DADCDF;
         text-align: center;
         position: fixed;
-        padding: 96px 0;
+        padding: 24px 24px 96px;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: all .5s;
+    }
+    .navigation.active {
+        margin-top: 0;
+    }
+    .nav-menu {
+        display: block !important;
+    }
+    .navigation li {
+        display: block;
+        margin-bottom: 4px;
+    }
+    .navigation li.logo {
+        width: 100%;
+    }
+    .navigation li.logo img {
+        width: 228px !important;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .navigation li a {
+        margin-left: 0;
     }
     .navigation-mobile {
         display: flex;
@@ -149,8 +175,18 @@
         line-height: 18px;
         font-size: 12px;
     }
-    .navigation-mobile-toggle {
+    .navigation-mobile-toggle, .navigation-mobile-close {
         width: 22px;
+    }
+    .overlay.active {
+        position: fixed;
+        z-index: 400;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(19, 18, 20, 0.64);
+        transition: all .5s;
     }
     .hero {
         margin-bottom: 20px;
