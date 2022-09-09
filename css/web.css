@@ -701,9 +701,11 @@ button, input {
 }
 .partners-logo-rotate {
     transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
 }
 .partners-logo.partners-logo-bottom .partners-logo-rotate {
     transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
 }
 .partners-logo div > img {
     height: 50px;
