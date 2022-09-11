@@ -264,6 +264,9 @@ button, input {
     display: inline-block;
     position: absolute;
 }
+.requirements-arrow-horizontal {
+    right: 0;
+}
 .requirements-title {
     display: block;
     margin-top: -150px;

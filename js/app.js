@@ -123,9 +123,9 @@ const transitionFade = gsap.timeline({
     }
 });
 transitionFade.fromTo(".requirements-box", {y: 900}, { duration: 1, y: 0, })
-    .to(".gap-title-1", { width: 16, duration: 1 }, "-=1")
+    .to(".gap-title-1", { width: "10%", duration: 1 }, "-=1")
     .to(".gap-title-2", { width: 16, duration: 1 }, "-=1")
-    .to(".gap-title-3", { width: 24, duration: 1 }, "-=1")
+    .to(".gap-title-3", { width: "5%", duration: 1 }, "-=1")
     .to(".requirements-box", {rotation: -90, duration: .5})
     .to(".requirements-box", {height: "140vw", width: "120vh", duration: 1.2})
     .fromTo(".requirements-box-inner-light", {opacity: 0, scale: 0}, { opacity: 1, scale: 1, duration: .8 }, "-=1")
@@ -153,7 +153,6 @@ solutions.to(".solutions-image.image-1", { rotate: 5, duration: 1 }, "-=1")
         .to(".solutions-image.image-3", { rotate: 5, duration: 2 }, "+=1.5")
         .to(".solutions-image.image-4", { rotate: -5, duration: 2 }, "+=1.5")
         .to(".solution-arrow-horizontal", { x: 50, duration: 2 });
-
 
 const workflow = gsap.timeline({
     scrollTrigger: {
