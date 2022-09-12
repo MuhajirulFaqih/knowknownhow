@@ -427,6 +427,9 @@
     .requirements-box-inner-dark {
         height: 95vh;
     }
+    .accomplish-outline {
+        height: 62vh;
+    }
     .accomplish-title {
         font-size: 32px;
     }
