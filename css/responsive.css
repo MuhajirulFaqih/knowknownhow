@@ -92,6 +92,9 @@
         padding: 24px;
         min-height: 72px;
     }
+    .partner-container {
+        height: 1100px;
+    }
     .footer-title {
         font-size: 80px;
     }
@@ -103,21 +106,47 @@
     .container {
         max-width: 960px;
     }
+    .hero-title {
+        font-size: 99px;
+    }
+    .hero-line {
+        width: 150px;
+    }
+    .hero.title-3 {
+        gap: 32px;
+    }
+    .hero-subtitle {
+        gap: 40px;
+    }
+    .hero-subtitle div {
+        font-size: 48px;
+    }
+    .hero-img-3 img {
+        width: 250px;
+    }
+    .circular {
+        width: 60%;
+        margin-top: 140px;
+    }
+    #requirements {
+        padding-bottom: 160px;
+    }
+    .workflow-container {
+        min-height: 200vh;
+    }
+    .footer-title {
+        font-size: 64px;
+    }
+    .simple-title span {
+        font-size: 16px;
+    }
+    .footer-contact-body {
+        font-size: 20px;
+    }
 }
 @media (max-width: 991.98px) {
     .container {
         max-width: 720px;
-    }
-}
-@media (max-width: 767.98px) {
-    .container {
-        max-width: 375px;
-        padding: 0 24px;
-        margin: 0 auto;
-    }
-    body {
-        font-size: 14px;
-        line-height: 21px;
     }
     .navigation {
         display: block;
@@ -192,6 +221,74 @@
         bottom: 0;
         background: rgba(19, 18, 20, 0.64);
         transition: all .5s;
+    }
+    .hero.title-1 {
+        gap: 5px;
+    }
+    .hero-img img {
+        width: 200px;
+    }
+    .hero-title span {
+        font-size: 64px;
+        margin-left: 16px;
+    }
+    .hero-img-3 img {
+        width: 140px;
+        border-radius: 20px;
+    }
+    .hero.title-3 {
+        gap: 6px;
+    }
+    .hero-subtitle div {
+        font-size: 32px;
+    }
+    .hero-subtitle-cta-mobile {
+        padding: 20px 32px;
+        gap: 14px;
+        display: inline-flex;
+        margin-top: 40px;
+        margin-bottom: 56px;
+    }
+    .hero-subtitle-cta-mobile span {
+        width: 44px;
+        display: inline-block;
+    }
+    .exceptional-img {
+        margin-top: 40px;
+    }
+    .exceptional-title {
+        margin-top: 24px;
+    }
+    .requirements-box {
+        width: 416px;
+        height: 658px;
+    }
+    .accomplish-outline {
+        height: 100vh;
+    }
+    .requirements-arrow {
+        margin-top: 80px;
+    }
+    .requirements-arrow-horizontal {
+        margin-bottom: 56px;
+        margin-top: 32px;
+    }
+    .cta-title {
+        font-size: 56px;
+    }
+    .cta-title .title-1 > span {
+        font-size: 40px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 375px;
+        padding: 0 24px;
+        margin: 0 auto;
+    }
+    body {
+        font-size: 14px;
+        line-height: 21px;
     }
     .hero.title-1 {
         gap: 5px;
@@ -289,6 +386,9 @@
     }
     .requirements-image, .requirements-arrow-horizontal, .requirements-arrow {
         position: relative;
+    }
+    .requirements-arrow {
+        margin-top: 0;
     }
     .requirements-arrow-horizontal {
         margin-bottom: 43px;
